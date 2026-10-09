@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="code-tag">&lt;/&gt;</span> Luz<span class="dot">.dev</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm">Contrátame <i class="fa-solid =>-arrow-up-right-from-square"></i></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="badge-dot"></span> INGENIERA DE SOFTWARE
+            </div>
+            <h1 class="hero-title">Hola, soy <span class="highlight">Luz</span> <br>Codifico pero no soy uh robot .</h1>
+            <p class="hero-description">
+                Apasionada por la ingeniería de software, documentación de procesos ,tester jr  y herramientas de vanguardia.
+            </p> 
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Ver mis proyectos <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-download"></i> Descargar CV</a>
+            </div>
+
+            <div class="tech-stack-mini">
+                <span>TECNOLOGÍAS PRINCIPALES:</span>
+                <div class="tech-icons">
+                    <i class="fa-brands fa-python" title="Python"></i>
+                    <i class="fa-brands fa-js" title="JavaScript"></i>
+                    <i class="fa-brands fa-react" title="React"></i>
+                    <i class="fa-brands fa-html5" title="HTML5"></i>
+                    <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                    <i class="fa-brands fa-git-alt" title="Git"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="code-card">
+                <div class="code-header">
+                    <div class="dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+                    <span class="code-title">developer_profile.py</span>
+                </div>
+                <div class="code-body">
+                    <pre><code><span class="keyword">class</span> <span class="class-name">SoftwareEngineer</span>:
+    <span class="keyword">def</span> <span class="func">__init__</span>(self):
+        self.name = <span class="string">"Luz"</span>
+        self.role = <span class="string">"Software Engineer"</span>
+        self.location = <span class="string">"México"</span>
+        self.skills = [<span class="string">"Python"</span>, <span class="string">"JavaScript"</span>, <span class="string">"SQL"</span>, <span class="string">"Git"</span>]
+        self.passions = [<span class="string">"Clean Code"</span>, <span class="string">"AI Tools"</span>, <span class="string">"Full-Stack"</span>]
+
+    <span class="keyword">def</span> <span class="func">build_solution</span>(self, problem):
+        <span class="keyword">return</span> f<span class="string">"Solución optimizada para {problem}"</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stat-card">
+            <i class="fa-solid fa-code"></i>
+            <div class="stat-info">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Código Limpio</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <div class="stat-info">
+                <span class="stat-number">+10</span>
+                <span class="stat-label">Proyectos Realizados</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <i class="fa-solid fa-bolt"></i>
+            <div class="stat-info">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Innovación Constante</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <span class="sub-title">LO QUE HE CONSTRUIDO</span>
+            <h2>Mis Proyectos</h2>
+        </div>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+                <h3>To-Do List App</h3>
+                <p>Aplicación de tareas con almacenamiento local. Agrega, completa y elimina tareas que persisten en el navegador.</p>
+                <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-weight-scale"></i></div>
+                <h3>Calculadora de IMC</h3>
+                <p>Calcula el Índice de Masa Corporal con validaciones de entrada y clasificación del resultado por rangos.</p>
+                <div class="project-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <h3>Portafolio de Testing</h3>
+                <p>Colección de casos de prueba, reportes de bugs y documentación técnica basada en proyectos reales.</p>
+                <div class="project-tags">
+                    <span>Testing</span><span>Documentación</span><span>QA</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="sub-title">¿Tienes un proyecto en mente?</span>
+            <h2>¡Trabajemos juntos!</h2>
+        </div>
+        <div class="contact-box">
+            <p>Estoy disponible para nuevas oportunidades y colaboraciones tecnológicas.</p>
+            <a href="mailto:luz@ejemplo.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Enviar Mensaje</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luz. Todos los derechos reservados. Diseñado para Ingeniera de Software.</p>
+    </footer>
+</body>
+</html>
