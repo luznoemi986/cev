@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Luz Noemí Pérez Zuñiga</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f4f8;
+            color: #1a1a2e;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .cv-header {
+            background: linear-gradient(135deg, #0a1932, #0d2b5e);
+            color: #fff;
+            padding: 2rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .cv-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4fc3f7;
+            box-shadow: 0 0 20px rgba(79, 195, 247, 0.4);
+            flex-shrink: 0;
+        }
+
+        .cv-header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4fc3f7;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-header .role {
+            font-size: 0.95rem;
+            color: #7eb8d4;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-info { display: flex; flex-direction: column; gap: 0.4rem; }
+        .contact-info a, .contact-info span {
+            color: #b0d4e8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .contact-info a:hover { color: #4fc3f7; }
+
+        .cv-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+        .cv-links a {
+            color: #4fc3f7;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        /* Body */
+        .cv-body { display: grid; grid-template-columns: 1fr 2fr; }
+
+        /* Sidebar */
+        .sidebar {
+            background: #f7fafc;
+            padding: 1.8rem 1.5rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        /* Main */
+        .main { padding: 1.8rem 2rem; }
+
+        /* Section titles */
+        .section-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0a1932;
+            border-bottom: 2px solid #4fc3f7;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cv-section { margin-bottom: 1.8rem; }
+
+        /* Skills */
+        .skill-group { margin-bottom: 1rem; }
+        .skill-group h4 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #0d2b5e;
+            margin-bottom: 0.4rem;
+        }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+        .skill-tags span {
+            background: #e8f4fd;
+            color: #0a1932;
+            border: 1px solid #b0d4e8;
+            border-radius: 50px;
+            padding: 0.15rem 0.6rem;
+            font-size: 0.75rem;
+        }
+
+        /* Languages */
+        .lang-item { margin-bottom: 0.8rem; }
+        .lang-item h4 { font-size: 0.85rem; font-weight: 600; color: #0a1932; }
+        .lang-item span { font-size: 0.75rem; color: #4a6fa5; }
+        .lang-bar {
+            height: 5px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            margin-top: 0.3rem;
+            overflow: hidden;
+        }
+        .lang-fill { height: 100%; background: linear-gradient(90deg, #4fc3f7, #00e5ff); border-radius: 5px; }
+
+        /* Experience & Education */
+        .entry { margin-bottom: 1.4rem; padding-bottom: 1.4rem; border-bottom: 1px solid #e2e8f0; }
+        .entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+        .entry-date {
+            font-size: 0.75rem;
+            color: #4fc3f7;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+
+        .entry h3 { font-size: 0.95rem; font-weight: 700; color: #0a1932; margin-bottom: 0.2rem; }
+        .entry .company { font-size: 0.82rem; color: #4a6fa5; margin-bottom: 0.5rem; font-weight: 600; }
+        .entry p { font-size: 0.82rem; color: #4a5568; }
+
+        .entry ul { padding-left: 1rem; margin-top: 0.3rem; }
+        .entry ul li { font-size: 0.82rem; color: #4a5568; margin-bottom: 0.2rem; }
+
+        .entry-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+        .entry-tags span {
+            background: #e8f4fd;
+            color: #0d2b5e;
+            border-radius: 50px;
+            padding: 0.1rem 0.55rem;
+            font-size: 0.72rem;
+            border: 1px solid #b0d4e8;
+        }
+
+        /* Print */
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; border-radius: 0; max-width: 100%; }
+            .print-btn { display: none; }
+        }
+
+        .print-btn {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background: #0a1932;
+        }
+        .print-btn button {
+            background: linear-gradient(135deg, #4fc3f7, #00e5ff);
+            color: #0a1932;
+            border: none;
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-btn">
+        <button onclick="window.print()">⬇ Guardar como PDF</button>
+    </div>
+
+    <div class="page">
+
+        <!-- Header -->
+        <div class="cv-header">
+            <div class="header-left">
+                <img src="fotoluzcv.jpeg" alt="Luz Noemí Pérez Zuñiga" class="cv-photo">
+                <div>
+                    <h1>Luz Noemí Pérez Zuñiga</h1>
+                    <p class="role">Ingeniera de Software · Tester Jr</p>
+                    <div class="contact-info">
+                        <a href="mailto:luznoemi986@gmail.com">✉ luznoemi986@gmail.com</a>
+                        <span>📞 +52 738 145 8614</span>
+                        <span>📍 Hidalgo, México</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-links">
+                <a href="https://www.linkedin.com/in/luz-noemi-perez-zuñiga-7bb8242a8" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com/luznoemi986" target="_blank">🐙 GitHub</a>
+            </div>
+        </div>
+
+        <div class="cv-body">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <div class="cv-section">
+                    <p class="section-title">Habilidades</p>
+                    <div class="skill-group">
+                        <h4>Lenguajes</h4>
+                        <div class="skill-tags">
+                            <span>Python</span><span>HTML5</span><span>CSS3</span><span>SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Herramientas</h4>
+                        <div class="skill-tags">
+                            <span>Git</span><span>GitHub</span><span>VS Code</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>QA & Testing</h4>
+                        <div class="skill-tags">
+                            <span>Casos de prueba</span><span>Reporte de bugs</span><span>Documentación</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Soft Skills</h4>
+                        <div class="skill-tags">
+                            <span>Trabajo en equipo</span><span>Comunicación</span><span>Atención al detalle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <p class="section-title">Idiomas</p>
+                    <div class="lang-item">
+                        <h4>Español</h4>
+                        <span>Nativo</span>
+                        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+                    </div>
+                    <div class="lang-item">
+                        <h4>Inglés</h4>
+                        <span>Intermedio (B1)</span>
+                        <div class="lang-bar"><div class="lang-fill" style="width:55%"></div></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Main -->
+            <div class="main">
+
+                <div class="cv-section">
+                    <p class="section-title">Perfil</p>
+                    <p>Ingeniera de Software próxima a egresar de la UAEH, con experiencia en desarrollo frontend, testing y documentación técnica. Apasionada por el código limpio, las herramientas de vanguardia y la mejora continua.</p>
+                </div>
+
+                <div class="cv-section">
+                    <p class="section-title">Experiencia</p>
+
+                    <div class="entry">
+                        <p class="entry-date">2024 — Actualidad</p>
+                        <h3>Soporte y Mantenimiento de Área de Cómputo</h3>
+                        <p class="company">Preparatoria — Hidalgo, México</p>
+                        <ul>
+                            <li>Mantenimiento preventivo y correctivo de equipos de cómputo.</li>
+                            <li>Soporte técnico a docentes y alumnos en el área de informática.</li>
+                            <li>Gestión y organización del laboratorio de cómputo.</li>
+                        </ul>
+                        <div class="entry-tags">
+                            <span>Soporte Técnico</span><span>Hardware</span><span>Atención a usuarios</span>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <p class="entry-date">2023 — 2024</p>
+                        <h3>Servicio Social — Apoyo Educativo</h3>
+                        <p class="company">UAEH — Programa de Apoyo Educativo a Escuelas</p>
+                        <ul>
+                            <li>Apoyo en actividades educativas en escuelas de la región.</li>
+                            <li>Documentación de actividades y reportes de avance.</li>
+                            <li>Colaboración con equipos multidisciplinarios.</li>
+                        </ul>
+                        <div class="entry-tags">
+                            <span>Servicio Social</span><span>Documentación</span><span>Trabajo en equipo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <p class="section-title">Formación</p>
+                    <div class="entry">
+                        <p class="entry-date">2021 — Diciembre 2025</p>
+                        <h3>Ingeniería de Software</h3>
+                        <p class="company">Universidad Autónoma del Estado de Hidalgo — UAEH</p>
+                        <p>Formación en desarrollo de software, bases de datos, testing, documentación técnica y metodologías ágiles.</p>
+                        <div class="entry-tags">
+                            <span>Próxima a egresar</span><span>Hidalgo, México</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
